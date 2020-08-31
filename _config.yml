@@ -13,9 +13,9 @@ title: Dagician                          # the main title
 tagline: 데이터 마술사가 되고 싶은.  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+  빅데이터, AI, 머신러닝, 딥러닝, 데이터분석
+  안녕하세요 Dagician 입니다.
+  빅데이터 분석가로 일하고 있습니다.
 
 # Replace with the website url, e.g. 'https://username.github.io'
 url: 'https://dagician.github.io'
