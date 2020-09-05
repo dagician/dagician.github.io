@@ -40,7 +40,7 @@ published: true
 
 ## Ruby 설치
 
-일단 업데이트 한 번 해주고
+- 업데이트
 
 ```
 sudo apt-get update
@@ -48,8 +48,7 @@ sudo apt-get update
 
 <br>
 
-
-루비 설치
+- 루비 설치
 
 ```
 sudo apt-get install ruby-full build-essential zlib1g-dev
@@ -57,8 +56,7 @@ sudo apt-get install ruby-full build-essential zlib1g-dev
 
 <br>
 
-
-터미널에 다음과 같이 입력한다. `.bashrc` 파일을 수정하는 코드이다.
+- 터미널에 다음과 같이 입력한다. `.bashrc` 파일을 수정하는 코드이다.
 
 ```
 echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
@@ -69,7 +67,7 @@ source ~/.bashrc
 
 <br>
 
-마지막으로 지킬 설치!
+- 마지막으로 지킬 설치!
 
 ```
 gem install jekyll bundler
@@ -250,9 +248,7 @@ bundle exec jekyll serve
 # 두 방법 다 가능하지만 개인적으로는 2번 방법을 좀 더 선호한다.
 ```
 
-<br>
+
 
 - 접속
-```
-http://localhost:4000
-```
+  http://localhost:4000
