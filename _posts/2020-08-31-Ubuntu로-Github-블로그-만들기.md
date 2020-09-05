@@ -2,8 +2,8 @@
 title: Ubuntu로 Github 블로그 만들기
 author: dagician
 date: 2020-08-31 00:42:00 +0900
-categories: [git, github page]
-tags: [깃허브 블로그, 깃허브 페이지, github page]
+categories: [git, blog]
+tags: [github page]
 toc: true
 pin: false
 comments: true
@@ -160,8 +160,13 @@ vi .ssh/id_rsa.pub
 http://jekyllthemes.org/
 
 
-나는 chirpy 테마를 선택했다. 가장 상단에 있는 테마라 아무 생각없이 설치해봤는데 생각보다 예뻐서 이 녀석으로 결정! jekyll의 테마들은 github에 올라가 있다. README.md 파일에 Installation 부분부터 잘 확인해보자
+나는 chirpy 테마를 선택했다.
 
+가장 상단에 있는 테마라 아무 생각없이 설치해봤는데 생각보다 예뻐서 이 녀석으로 결정!
+
+
+
+jekyll의 테마들은 github에 올라가 있다. README.md 파일에 Installation 부분부터 잘 확인해보자
 
 - Fork 받기 (`username` 에는 자신의 유저명을 넣도록 한다.)
 
@@ -215,7 +220,7 @@ http://localhost:4000
 
 `_posts` 폴더에 있는 기존 포스팅을 복사해서 새로운 포스팅을 만든 후 적당한 내용을 입력한다.
 
-깃에 변경 사항을 커밋
+- 깃에 변경 사항을 커밋
 
 ```
 git add -A
@@ -223,17 +228,17 @@ git commit -m "first commit"
 git push
 ```
 
+<br>
 
-
-퍼블리싱 명령을 통해 자동으로 카테고리와 태그 파일을 생성할 수 있다.
+- 퍼블리싱 명령을 통해 자동으로 카테고리와 태그 파일을 생성할 수 있다.
 
 ```
 bash tools/publish.sh
 ```
 
+<br>
 
-
-로컬 서버 실행
+- 로컬 서버 실행
 
 ```
 # 1. 테마에서 제공하는 방법
@@ -245,7 +250,9 @@ bundle exec jekyll serve
 # 두 방법 다 가능하지만 개인적으로는 2번 방법을 좀 더 선호한다.
 ```
 
+<br>
 
-
-접속
+- 접속
+```
 http://localhost:4000
+```
