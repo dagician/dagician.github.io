@@ -8,21 +8,22 @@ toc: true
 pin: false
 comments: true
 published: true
+
 ---
 
-과거 깃허브 블로그를 만들어야겠다는 생각이 들어 이런 저런 정보를 찾아봤지만 포기했었다.  가장 큰 이유는 윈도우가 jekyll 을 지원하지 않기 때문이었다.  
+과거 깃허브 블로그를 만들어야겠다는 생각이 들어 이런 저런 정보를 찾아봤지만 포기했었다.  
 
-이왕 블로그를 시작한다면 당연히 예쁘게 만들고 싶었지만 디자인 능력이 거의 전무하기에 만들어진 테마를 이용하려 했고 깃허브 블로그의 가장 큰 디자인 커뮤니티는 jekyll 이니 jekyll 테마를 적용하려 했지만 시작부터 벽에 막힌 느낌이었고 결국 tistory 블로그를 이용할 수밖에 없었다.
+이왕 블로그를 시작한다면 당연히 예쁘게 만들고 싶었지만 필자의 디자인 능력이 거의 전무하기에 만들어진 테마를 이용하고자 했고, 가장 유명한 jekyll 테마를 적용하려 했지만 윈도우에서 jekyll을 공식적으로 지원하지 않아 결국 tistory 블로그를 이용할 수밖에 없었다.
 
-그런데 비오는 주말 할일 없이 유튜브만 보며 낄낄거리다 문득 깃허브 블로그 만들기에 재도전 해보면 어떨까 하는 생각이 들었고 결론부터 얘기하자면 여러 삽질 끝에 결국 설치에 성공했다.
+그런데 비오는 주말, 할 일 없이 유튜브만 보며 낄낄거리다 문득 깃허브 블로그 만들기에 재도전 해보면 어떨까 하는 생각이 들었고 결론부터 말하자면 여러 삽질 끝에 결국 설치에 성공했다.
 
 <br>
 
-## Virtual box + Ubuntu + Jekyll + git = ~~슈퍼 판타스틱 쏘쿨 멋짐폭팔~~ 깃허브 블로그
+## Virtual box + Ubuntu + Jekyll + git = 깃허브 블로그
 
 내가 성공한 방법은 위 방법이다.
 
-결국 윈도우에서는 막히는 부분이 너무 많았고 microsoft store에 있는 Ubuntu app 앱을 이용해 설치해 봤지만 vi 편집기로 포스팅을 하고 소스를 수정하기는 죽어도 싫었다.  골수 Android, Windows 유저였지만, 장기적으로 mac을 사용하겠다고 생각하고 있었기에 익숙해질 겸 리눅스 GUI 환경을 구성하고 열심히 사용할 계획으로 위 조합을 선택했다.
+결국 윈도우에서는 막히는 부분이 너무 많았고 microsoft store에 있는 Ubuntu app 앱을 이용해 설치해 봤지만 포스팅과 소스의 수정이 필요할 경우 파일 편집과 이동에서 귀찮은 과정들이 자주 발생했다.  결국 Ubuntu 내에서 직접 수정 하고 바로 화면을 확인 하려면 리눅스 GUI 환경을 구성하는게 좋겠다고 생각해 위 조합을 선택했다.
 
 <br>
 
@@ -32,7 +33,7 @@ published: true
 
 [Windows에 설치된 VirtualBox 6.1을 사용하여 Ubuntu 20.04 설치하기](https://www.youtube.com/watch?v=gj1sU2Qs9y4)
 
-성격 급한 나에게 딱 맞는, 쓸데없는 설명 없이 설치법만 알려주는 고마운 영상이었다.
+성격 급한 나에게 딱 맞게, 쓸데없는 설명 없이 설치법만 알려주는 고마운 영상이었다.
 
 
 <br>
@@ -76,14 +77,6 @@ gem install jekyll bundler
 
 <br>
 
-아! 나중에 따로 설치하면 귀찮으니 깃도 설치하자
-
-```
-sudo apt-get install git
-```
-
-<br>
-
 ## 테스트 블로그 만들어보기!
 
 1. 블로그 만들기 (현재 폴더에 myblog 라는 이름의 블로그 project 프로젝트 폴더가 만들어진다.)
@@ -118,37 +111,26 @@ http://localhost:4000
 
 <br>
 
-## 깃 계정 생성
+## 깃 계정 생성 & 연동
 
 깃허브 페이지를 만들겠다고 마음먹은 사람이라면 깃 계정정도는 있을테니 pass!
 (깃 계정을 만들고 설정하는 내용은 다른 포스트를 참고하도록 한다.)
 
-## 자 이제 테마를 적용해보자
+<br>
 
-구글에서 jekyll theme 이라 검색하면 이 사이트가 나온다.
-http://jekyllthemes.org/
+1. Ubuntu 쉘에서 깃 설치
 
-
-나는 chirpy 테마를 선택했다.
-
-가장 상단에 있는 테마라 아무 생각없이 설치해봤는데 생각보다 예뻐서 이 녀석으로 결정!
-
-
-~~IT를 하는 사람으로서 언제나 문서를 잘 읽어봐야 한다. 대충 이렇게 하면 되지 않을까 하며 주먹구구로 작업하다 보면 많은 시간을 날리게 된다.ㅜㅠ~~
-
-jekyll의 테마들은 github에 올라가 있다. README.md 파일에 Installation 부분부터 잘 확인해보자
-
-1. Fork 받기 (`username` 에는 자신의 유저명을 넣도록 한다.)
-
-https://github.com/cotes2020/jekyll-theme-chirpy/fork
+```
+sudo apt-get install git
+```
 
 <br>
 
 2. git global config
 
 ```
-git config --global user.email "you@example.com"
-git config --global user.name "내 이름"
+git config --global user.name "username"
+git config --global user.email "user@example.com"
 ```
 
 <br>
@@ -165,13 +147,34 @@ ssh-keygen
 # 파일 내용 조회
 vi .ssh/id_rsa.pub
 ```
-`id_rsa.pub` 의 모든 내용을 복사해서 `깃 허브 사용자 > Settings > SSH and GPG keys > new key` 로 이동한뒤 적당한 타이틀을 입력, key에는 복사한 내용을 입력해준다.
+
+`id_rsa.pub` 의 모든 내용을 복사해서 깃허브 사이트의 ` 사용자 아이콘 > Settings > SSH and GPG keys > new key` 로 이동한뒤 적당한 타이틀을 입력, key에는 복사한 내용을 입력해준다.
 
 리눅스에 공인인증서를 만들고, 그 공인인증서를 깃에 등록했다고 생각하면 될 것이다.
 
 <br>
 
-4. git clone
+## jekyll 테마 적용
+
+구글에서 jekyll theme 이라 검색하면 이 사이트가 나온다.
+http://jekyllthemes.org/
+
+
+나는 chirpy 테마를 선택했다.
+
+가장 상단에 있는 테마라 아무 생각없이 설치해봤는데 생각보다 예뻐서 이 녀석으로 결정!
+
+
+
+jekyll의 테마들은 github에 올라가 있다. README.md 파일에 Installation 부분부터 잘 확인해보자
+
+1. Fork 받기 (`username` 에는 자신의 유저명을 넣도록 한다.)
+
+https://github.com/cotes2020/jekyll-theme-chirpy/fork
+
+<br>
+
+2. git clone
 
 ```
 git clone git@github.com:<username>/jekyll-theme-chirpy -b master --single-branch
@@ -179,7 +182,7 @@ git clone git@github.com:<username>/jekyll-theme-chirpy -b master --single-branc
 
 <br>
 
-5. 프로젝트 폴더로 이동하고 bundle 설치
+3. 프로젝트 폴더로 이동하고 bundle 설치
 
 ```
 cd jekyll-theme-chirpy
@@ -211,9 +214,11 @@ http://localhost:4000
 
 <br>
 
-## 자 이제 마지막 배포를 해볼까?
+## 포스팅
 
-프로젝트 폴더로 이동해서
+`_posts` 폴더에 있는 기존 포스팅을 복사해서 새로운 포스팅을 만든 후 적당한 내용을 입력한다.
+
+깃에 변경 사항을 커밋
 
 ```
 git add -A
@@ -221,8 +226,29 @@ git commit -m "first commit"
 git push
 ```
 
-새로운 포스트를 하나 써서 배포해보자
-
-프로젝트 폴더 내 _posts 라는 폴더에 파일을 대충 하나 복사해서 글을 대충 넣어보고 위 과정 반복!
 
 
+퍼블리싱 명령을 통해 자동으로 카테고리와 태그 파일을 생성할 수 있다.
+
+```
+bash tools/publish.sh
+```
+
+
+
+로컬 서버 실행
+
+```
+# 1. 테마에서 제공하는 방법
+bash tools/run.sh
+
+# 2. 지킬에서 제공하는 방법
+bundle exec jekyll serve
+
+# 두 방법 다 가능하지만 개인적으로는 2번 방법을 좀 더 선호한다.
+```
+
+
+
+접속
+http://localhost:4000
