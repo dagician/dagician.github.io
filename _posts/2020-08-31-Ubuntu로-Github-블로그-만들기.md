@@ -7,7 +7,7 @@ tags: [github page]
 toc: true
 pin: false
 comments: true
-published: false
+published: true
 ---
 
 # Ubuntu로 Github 블로그 만들기
