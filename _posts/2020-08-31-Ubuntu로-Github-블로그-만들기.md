@@ -2,8 +2,8 @@
 title: Ubuntu로 Github 블로그 만들기
 author: dagician
 date: 2020-08-31 00:42:00 +0900
-categories: [git, blog]
-tags: [github page]
+categories: [git, github page]
+tags: [깃허브 블로그, 깃허브 페이지, github page]
 toc: true
 pin: false
 comments: true
@@ -79,25 +79,31 @@ gem install jekyll bundler
 
 ## 테스트 블로그 만들어보기!
 
-1. 블로그 만들기 (현재 폴더에 myblog 라는 이름의 블로그 project 프로젝트 폴더가 만들어진다.)
+- 블로그 만들기 (현재 폴더에 myblog 라는 이름의 블로그 project 프로젝트 폴더가 만들어진다.)
 
 ```
 jekyll new myblog
 ```
 
-2. 폴더 이동
+<br>
+
+- 폴더 이동
 
 ```
 cd myblog
 ```
 
-3. 사이트 빌드 및 로컬 서버 실행
+<br>
+
+- 사이트 빌드 및 로컬 서버 실행
 
 ```
 bundle exec jekyll serve
 ```
 
-4. 접속
+<br>
+
+- 접속
 
 http://localhost:4000
 
@@ -112,7 +118,7 @@ http://localhost:4000
 
 <br>
 
-1. Ubuntu 쉘에서 깃 설치
+- Ubuntu 쉘에서 깃 설치
 
 ```
 sudo apt-get install git
@@ -120,7 +126,7 @@ sudo apt-get install git
 
 <br>
 
-2. git global config
+- git global config
 
 ```
 git config --global user.name "username"
@@ -129,7 +135,7 @@ git config --global user.email "user@example.com"
 
 <br>
 
-3. ssh-keygen
+- ssh-keygen
 
 ```
 # 홈 디렉토리로 이동
@@ -154,21 +160,18 @@ vi .ssh/id_rsa.pub
 http://jekyllthemes.org/
 
 
-나는 chirpy 테마를 선택했다.
-
-가장 상단에 있는 테마라 아무 생각없이 설치해봤는데 생각보다 예뻐서 이 녀석으로 결정!
+나는 chirpy 테마를 선택했다. 가장 상단에 있는 테마라 아무 생각없이 설치해봤는데 생각보다 예뻐서 이 녀석으로 결정! jekyll의 테마들은 github에 올라가 있다. README.md 파일에 Installation 부분부터 잘 확인해보자
 
 
+- Fork 받기 (`username` 에는 자신의 유저명을 넣도록 한다.)
 
-jekyll의 테마들은 github에 올라가 있다. README.md 파일에 Installation 부분부터 잘 확인해보자
-
-1. Fork 받기 (`username` 에는 자신의 유저명을 넣도록 한다.)
-
+``` https://github.com/cotes2020/jekyll-theme-chirpy/fork
 https://github.com/cotes2020/jekyll-theme-chirpy/fork
+```
 
 <br>
 
-2. git clone
+- git clone
 
 ```
 git clone git@github.com:<username>/jekyll-theme-chirpy -b master --single-branch
@@ -176,7 +179,7 @@ git clone git@github.com:<username>/jekyll-theme-chirpy -b master --single-branc
 
 <br>
 
-3. 프로젝트 폴더로 이동하고 bundle 설치
+- 프로젝트 폴더로 이동하고 bundle 설치
 
 ```
 cd jekyll-theme-chirpy
@@ -186,7 +189,7 @@ bundle install
 
 <br>
 
-6. coreutils 설치
+- coreutils 설치
 
 ```
 sudo apt-get install coreutils
@@ -194,7 +197,7 @@ sudo apt-get install coreutils
 
 <br>
 
-7. 서버 실행
+- 서버 실행
 
 ```
 bundle exec jekyll serve
@@ -202,7 +205,7 @@ bundle exec jekyll serve
 
 <br>
 
-8. 접속
+- 접속
 
 http://localhost:4000
 
