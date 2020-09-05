@@ -9,6 +9,7 @@ pin: false
 comments: true
 published: true
 
+
 ---
 
 과거 깃허브 블로그를 만들어야겠다는 생각이 들어 이런 저런 정보를 찾아봤지만 포기했었다.  
@@ -166,9 +167,9 @@ http://jekyllthemes.org/
 
 jekyll의 테마들은 github에 올라가 있다. README.md 파일에 Installation 부분부터 잘 확인해보자
 
-- Fork 받기 (`username` 에는 자신의 유저명을 넣도록 한다.)
+- Fork 받기
 
-``` https://github.com/cotes2020/jekyll-theme-chirpy/fork
+``` 
 https://github.com/cotes2020/jekyll-theme-chirpy/fork
 ```
 
