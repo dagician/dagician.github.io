@@ -2,8 +2,8 @@
 title: Ubuntu로 Github 블로그 만들기
 author: dagician
 date: 2020-08-31 00:42:00 +0900
-categories: [git, blog]
-tags: [github page]
+categories: [git, github page]
+tags: [github page, 깃허브 페이지, 깃허브 블로그]
 toc: true
 pin: false
 comments: true
