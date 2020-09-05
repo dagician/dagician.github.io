@@ -85,23 +85,17 @@ gem install jekyll bundler
 jekyll new myblog
 ```
 
-<br>
-
 2. 폴더 이동
 
 ```
 cd myblog
 ```
 
-<br>
-
 3. 사이트 빌드 및 로컬 서버 실행
 
 ```
 bundle exec jekyll serve
 ```
-
-<br>
 
 4. 접속
 
