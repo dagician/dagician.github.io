@@ -10,11 +10,11 @@ comments: true
 published: true
 ---
 
-> 본 글은 판다스(pandas)의 기본 사용법을 소개해 놓은 [10 Minutes to pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html) 을 번역한 내용([DANDYRILLA](https://dandyrilla.github.io/))을 다시 편집하~~~~~~~~~~~~~
+> 본 글은 판다스(pandas)의 기본 사용법을 소개해 놓은 [10 Minutes to pandas](https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html) 을 번역한 내용([DANDYRILLA](https://dandyrilla.github.io/))을 다시 편집하여 요약한 내용입니다. 처음 pandas를 공부하며 원글을 읽고 도전해봤지만 10분 만에 전체 과정을 마무리하긴 힘들었습니다. 그래서 제 기준에서 pandas를 처음 접하는 사람들이 pandas에 대해 이해하고 시작하기에 충분할 것 같은 내용들만 모아 요약해 봤습니다.
 
 
 
-## 시작하기에 앞서
+# 0. 시작하기에 앞서
 
 pandas 를 사용하기 위해서 다음과 같이 모듈을 임포트(import) 합니다.
 
@@ -24,8 +24,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 ```
 
+<br>
 
-## 1. 데이터 오브젝트 생성하기
+# 1. 데이터 오브젝트 생성하기
 
 - 데이터 오브젝트는 '데이터를 담고 있는 그릇'입니다.
 - 대표적으로 Series 와 DataFrame 이 있습니다.
@@ -34,7 +35,7 @@ import matplotlib.pyplot as plt
 
 
 
-### Series
+### 1.1 Series
 
 **Series**는 기본적으로 리스트를 넘겨주어 만들 수 있습니다.  또한 값이 위치하고 있는 정보인 인덱스(index)가 Series 에 같이 저장되게 됩니다.
 
@@ -50,9 +51,9 @@ s = pd.Series([1, 3, 5, np.nan, 6, 8])
 # dtype: float64
 ```
 
+<br>
 
-
-### DataFrame - 방법 1 : numpy array
+### 1.2 DataFrame - numpy array
 
 **DataFrame**은 여러 형태의 데이터를 받아 생성할 수 있는데 그 중 한 방법으로 아래와 같이 numpy array 를 받아 생성이 가능합니다. DataFrame 은 2차원 배열의 형태를 띄고 있습니다. 따라서 우리가 자주 보는 표 형태와 같이 두 가지의 기준에 따라 데이터를 담고 있습니다.
 
@@ -74,7 +75,7 @@ df = pd.DataFrame(np.random.randn(6,4), index=dates, columns=cols)
 
 <br>
 
-### DataFrame - 방법 2 : dict
+### 1.3 DataFrame - dict
 
 DataFrame 을 생성하는 또 다른 방법으로 아래와 같이 딕셔너리(dict)를 넣어주어 만들 수 있습니다.
 dict 의 key 값이 열을 정의하는 컬럼이 되며, 인덱스는 0부터 1씩 증가하는 정수 인덱스가 사용됩니다.
@@ -97,9 +98,9 @@ df2 = pd.DataFrame({'A': 1.,
 
 
 
-## 2. 데이터 확인하기 (Viewing Data)
+# 2. 데이터 확인하기 (Viewing Data)
 
-### head(), tail()
+### 2.1 head(), tail()
 
 DataFrame 에 들어있는 자료들을 확인하기 위해  `.head()`와 `.tail()` 메소드를 사용하면 됩니다. 기본적으로 상위 또는 하위 5 개의 자료를 보여주는데, 메소드의 인자로 보고싶은 데이터의 개수를 숫자를 넣어줄 수 있습니다.
 
@@ -121,9 +122,9 @@ df.tail(3)
 # 2013-01-06 -0.673690  0.113648 -1.478427  0.524988
 ```
 
+<br>
 
-
-### index, columns, values
+### 2.2 index, columns, values
 
 DataFrame의 인덱스를 보려면 `.index` 속성을, 컬럼을 보려면 `.columns` 속성을, numpy 데이터를 보려면 `.values` 속성을 통해 확인하면 됩니다.
 
@@ -145,9 +146,9 @@ df.values
 #  [-0.6737,  0.1136, -1.4784,  0.525 ]]
 ```
 
+<br>
 
-
-### describe()
+### 2.3 describe()
 
 `.describe()` 메소드는 생성했던 DataFrame 의 간단한 통계 정보를 보여줍니다.
 
@@ -164,9 +165,9 @@ df.describe()
 # max    1.212112  0.567020  0.276232  1.071804
 ```
 
+<br>
 
-
-### T
+### 2.4 T
 
 `.T` 속성은 DataFrame 에서 index 와 column 을 바꾼 형태의 DataFrame 입니다.
 
@@ -187,14 +188,14 @@ df.T()
 # TypeError: 'DataFrame' object is not callable
 ```
 
+<br>
 
-
-### sort_index()
+### 2.5 sort_index()
 
 행과 열 이름을 정렬하여 나타낼 수 있습니다.  
 
 -  `axis` (정렬 대상 축) :  `axis=0` 라고 써주면 인덱스 기준 정렬(기본값), `axis=1` 라고 써주면 컬럼을 기준으로 정렬합니다.
-- `ascending` (정렬 방향) :  `ascending=True` 는 오름차순 정렬(기본값), `ascending=False` 는 내림차순 정렬을 하겠다는 의미입니다. 
+-  `ascending` (정렬 방향) :  `ascending=True` 는 오름차순 정렬(기본값), `ascending=False` 는 내림차순 정렬을 하겠다는 의미입니다. 
 
 ```python
 df.sort_index(axis=1, ascending=False)
@@ -227,11 +228,11 @@ df.sort_values(by='B')
 
 
 
-## 3. 데이터 선택하기 (Selection)
+# 3. 데이터 선택하기 (Selection)
 
 데이터프레임의 슬라이싱은 `[]`, `.loc `, `.at`, `.iloc` 가 있습니다.  (처음에는 복잡하다고 느끼시겠지만 pandas를 사용하다보면 주로 사용하는 슬라이싱이 몇 가지로 압축될 것입니다. 개인적으로 저는 `df[컬럼명]`, `.iloc` 를 많이 사용하는 것 같습니다.)
 
-#### `df[컬럼명]`
+### 3.1 df[컬럼명]
 
 ```python
 ## A컬럼의 데이터만 갖고옵니다.
@@ -250,7 +251,7 @@ type(df['A'])
 
 <br>
 
-#### `df[시작인덱스:끝인덱스+1]` 
+### 3.2 df[시작인덱스:끝인덱스+1]
 
 ```python
 ## 맨 처음 3개의 행을 가져옵니다.
@@ -259,13 +260,13 @@ df[0:3]
 # 2013-01-01  0.469112 -0.282863 -1.509059 -1.135632
 # 2013-01-02  1.212112 -0.173215  0.119209 -1.044236
 # 2013-01-03 -0.861849 -2.104569 -0.494929  1.071804
-```
 
-`df[0:3]` 이라고 입력했지만 3번째 행을 가져오지 않음에 유의합니다.
+# df[0:3] 이라고 입력했지만 3번째 행을 가져오지 않음에 유의합니다.
+```
 
 <br>
 
-#### `df[시작인덱스명:끝인덱스명]`
+### 3.3 df[시작인덱스명:끝인덱스명]
 
 이 때에는 숫자를 이용하여 슬라이싱 할 때와 달리 처음과 끝의 행이 모두 포함된 결과를 가져옵니다.
 
@@ -278,19 +279,9 @@ df['20130102':'20130104']
 # 2013-01-04  0.721555 -0.706771 -1.039575  0.271860
 ```
 
-![Image](/images/2017-08-12/fig2.png?gray "Select rows"){: .center-image}
-
-여기서 제가 왜 특정 '행'이 아니라 '행 범위'라고 강조하였는지를 설명드리겠습니다.
-만약 특정 행 하나를 가져오고 싶은 경우에 `df['20130102']` 라고 하면 KeyError 가 발생합니다.
-왜일까요? 이 때에는 '20130102'라는 이름의 '인덱스'가 아니라 '컬럼'을 갖고 있는지 찾게 됩니다.
-따라서 현재 데이터프레임에는 없으므로 키 값이 없다는 에러를 출력하게 되는 것입니다.
-특정 '행 하나'를 선택하고 싶을 때에는 `df['20130102':'20130102']`와 같이 입력하면 됩니다.
-다시 정리하자면, 데이터프레임 자체가 갖고 있는 슬라이싱은
-`df[컬럼명]`, `df[시작인덱스:끝인덱스+1]`, `df[시작인덱스명:끝인덱스명]` 의 형태로 사용할 수 있습니다.
-
 <br>
 
-####  `.loc[인덱스명]`
+###  3.4 .loc[인덱스명]
 
 라벨의 이름을 이용하여 선택할 수 있는 `.loc`를 이용할 수도 있습니다.
 
@@ -305,7 +296,7 @@ df.loc[dates[0]] # df.loc['20130101'], df.loc['2013-01-01'] 로 써도 동일하
 
 <br>
 
-#### `.loc[:,['컬럼명1', '컬럼명2'...]]`
+### 3.5 .loc[:,['컬럼명1', '컬럼명2'...]]
 
 컬럼 'A'와 컬럼 'B'에 대한 모든 값 가져오기.
 
@@ -322,7 +313,7 @@ df.loc[:,['A','B']]
 
 <br>
 
-#### `.loc[시작인덱스명:끝인덱스명, ['컬럼명1', '컬럼명2'...]]`
+### 3.6 .loc[시작인덱스명:끝인덱스명, ['컬럼명1', '컬럼명2'...]]
 
 ```python
 df.loc['20130102':'20130104',['A','B']]
@@ -334,7 +325,7 @@ df.loc['20130102':'20130104',['A','B']]
 
 <br>
 
-#### `.loc[인덱스명, ['컬럼명1', '컬럼명2'...]]`
+### 3.7 .loc[인덱스명, ['컬럼명1', '컬럼명2'...]]
 
 ```python
 df.loc[dates[0], ['A','B']]
@@ -345,7 +336,7 @@ df.loc[dates[0], ['A','B']]
 
 
 
-#### `.at`
+### 3.8 .at
 
 특정 인덱스 값과 특정 컬럼에 있는 값 가져오기. 이는 `.at`을 이용할 수도 있습니다.
 
@@ -362,7 +353,7 @@ df.at[dates[0], 'A']
 
 
 
-#### `.iloc`
+### 3.9 .iloc
 
 `.iloc` 는 위치를 이용하여 데이터를 선택할 수 있습니다.
 여기서 인덱스 번호는 python 에서 사용하는 인덱스와 같은 개념으로 이해하시면 됩니다.
@@ -442,9 +433,7 @@ df.iat[1,1]
 
 <br>
 
-
-
-#### 조건을 이용하여 선택하기
+### 3.10 조건을 이용하여 선택하기
 
 - 특정한 열의 값 기준 조건
 
@@ -474,8 +463,8 @@ df[df > 0]
 
 
 
-또한 필터링을 해야 하는 경우에 사용할 수 있는 `isin()`이라는 메소드도 제공합니다. 
-다음과 같이 새로운 열 하나를 추가한 후 새롭게 추가된 열에 들어있는 값을 기준으로 행을 선택할 수 있습니다.
+- 필터링 조건
+  `isin()` 은 필터링 하려는 값 리스트를 인자로 전달하면 해당되는 행을 리턴합니다.
 
 ```python
 df2 = df.copy()
@@ -498,9 +487,7 @@ df2[df2['E'].isin(['two', 'four'])]  # E 컬럼의 값이 two, four인 행 선�
 
 <br>
 
-
-
-#### 데이터 변경하기
+### 3.11 데이터 변경하기
 
 우리가 선택했던 데이터 프레임의 특정 값들을 다른 값으로 변경할 수 있습니다. 이에 대한 방법을 알아봅니다.
 
@@ -585,7 +572,7 @@ df2
 
 
 
-## 4. 결측치 (Missing Data)
+# 4. 결측치 (Missing Data)
 
 여러가지 이유로 우리는 데이터를 전부 다 측정하지 못하는 경우가 종종 발생합니다.
 이처럼 측정되지 못하여 비어있는 데이터를 '결측치'라고 합니다. pandas 에서는 결측치를 `np.nan` 으로 나타냅니다.
@@ -655,9 +642,9 @@ pd.isna(df1)
 
 
 
-## 5. 연산 (Operations)
+# 5. 연산 (Operations)
 
-### 통계적 지표들 (Stats)
+### 5.1 통계적 지표들 (Stats)
 
 평균 구하기. 일반적으로 결측치는 제외하고 연산을 합니다.
 
@@ -715,7 +702,7 @@ df.sub(s, axis='index')
 
 <br>
 
-### 함수 적용하기 (Apply)
+### 5.2 함수 적용하기 (Apply)
 
 데이터프레임에 함수를 적용할 수 있습니다.
 기존에 존재하는 함수를 사용하거나 사용자가 정의한 람다 함수를 사용할 수도 있습니다.
@@ -741,7 +728,7 @@ df.apply(lambda x: x.max() - x.min())
 
 <br>
 
-### 히스토그램 구하기 (Histogramming)
+### 5.3 히스토그램 구하기 (Histogramming)
 
 데이터의 값들의 빈도를 조사하여 히스토그램을 만들 수 있습니다.
 [Histogramming and Discretization](https://pandas.pydata.org/pandas-docs/stable/getting_started/basics.html#basics-discretization)에서 더 많은 정보를 찾아보세요.
@@ -770,7 +757,7 @@ s.value_counts()
 
 <br>
 
-### 문자열 관련 메소드들 (String methods)
+### 5.4 문자열 관련 메소드들 (String methods)
 
 아래의 예제처럼 시리즈(Series)는 배열의 각 요소에 쉽게 적용이 가능하도록
 `str` 이라는 속성에 문자열을 처리할 수 있는 여러가지의 메소드들을 갖추고 있습니다.
@@ -796,7 +783,7 @@ s.str.lower()
 
 <br>
 
-## 6. 합치기 (Merging)
+# 6. 합치기 (Merging)
 
 다양한 정보를 담은 자료들이 있을 때 이들을 합쳐 새로운 자료를 만들어야 할 때가 있습니다.
 
@@ -804,7 +791,7 @@ s.str.lower()
 - `merge` : 다른 형태의 자료들을 한 컬럼을 기준으로 합친다.
 - `append` : 기존 데이터 프레임에 하나의 행을 추가한다.
 
-#### Concat
+### 6.1 Concat
 
 아래는 concat 을 이용하여 pandas 오브젝트들을 일렬로 잇는 예제입니다.
 
@@ -852,7 +839,7 @@ pd.concat([df1, df2, df3])
 
 <br>
 
-#### Merge
+### 6.2 Merge
 
 데이터베이스에서 사용하는 SQL 의 join 기능입니다. merge 메소드를 통해 이루어집니다.
 
@@ -900,7 +887,7 @@ merged = pd.merge(left, right, on='key')
 
 <br>
 
-#### Append
+### 6.3 Append
 
 데이터프레임의 맨 뒤에 행을 추가합니다.
 아래의 예제는 4번째 행을 기존의 데이터프레임의 맨 뒤에 한번 더 추가하는 방법을 보여주고 있습니다.
@@ -999,9 +986,9 @@ df.groupby(['A', 'B']).sum()
 
 
 
-## 8. 변형하기 (Reshaping)
+# 8. 변형하기 (Reshaping)
 
-#### Pivot Tables
+### 8.1 Pivot Tables
 
 ```python
 df = pd.DataFrame({'A': ['one', 'one', 'two', 'three'] * 3,
@@ -1049,7 +1036,7 @@ pd.pivot_table(df, values='D', index=['A', 'B'], columns=['C'])
 
 
 
-## 9. 그래프로 표현하기 (Plotting)
+# 9. 그래프로 표현하기 (Plotting)
 
 다음과 같은 데이터가 있을 때, 그래프 그리기는 다음과 같이 `plot()` 메소드 하나만으로 완성할 수 있다.
 
@@ -1060,7 +1047,7 @@ df.plot.bar()
 
 ![Image](https://pandas.pydata.org/pandas-docs/stable/_images/pandas-DataFrame-plot-bar-1.png "Plotting"){: .center-image}
 
-`plot()` 메소드는 다양한 형태의 그래프를 그릴 수 있도록 도와주지만,  seaborn과 같이 더 다양한 기능의 시각화 라이브러리들이 있고 사용도 쉬우니 차차 다른 라이브러리들을 익혀보도록 하자
+`plot()` 메소드는 다양한 형태의 그래프를 그릴 수 있도록 도와주지만,  seaborn과 같이 더 다양한 기능의 시각화 라이브러리들이 있고 사용도 쉬우니 차차 다른 라이브러리들을 익혀볼 것을 추천한다.
 
 <br>
 
@@ -1071,7 +1058,7 @@ df.plot.bar()
 
 데이터를 다양한 형식의 파일에 읽고 쓰는 방법을 알아봅니다.
 
-#### CSV
+### 10.1 CSV
 
 데이터 프레임을 CSV 형식으로 저장하기.
 
@@ -1101,7 +1088,7 @@ pd.read_csv('foo2.csv')
 
 <br>
 
-#### HDF5
+### 10.2 HDF5
 
 HDF5 형식으로 저장하기.
 
@@ -1121,7 +1108,7 @@ pd.read_hdf('foo.h5', 'df')
 
 <br>
 
-#### Excel
+### 10.3 Excel
 
 데이터 프레임을 엑셀 파일로 저장하기.
 
@@ -1138,4 +1125,3 @@ pd.read_excel('foo.xlsx', 'Sheet1', index_col=None, na_values=['NA'])
 # 1   B   30
 # 2   C   20
 ```
-
