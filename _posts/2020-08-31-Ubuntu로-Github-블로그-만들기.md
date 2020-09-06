@@ -13,6 +13,8 @@ published: true
 
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HQXtYpsgiWc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 과거 깃허브 블로그를 만들어야겠다는 생각이 들어 이런 저런 정보를 찾아봤지만 포기했었다.  
 
 이왕 블로그를 시작한다면 당연히 예쁘게 만들고 싶었지만 필자의 디자인 능력이 거의 전무하기에 만들어진 테마를 이용하고자 했고, 가장 유명한 jekyll 테마를 적용하려 했지만 윈도우에서 jekyll을 공식적으로 지원하지 않아 결국 tistory 블로그를 이용할 수밖에 없었다.
