@@ -10,6 +10,7 @@ comments: true
 published: true
 
 
+
 ---
 
 과거 깃허브 블로그를 만들어야겠다는 생각이 들어 이런 저런 정보를 찾아봤지만 포기했었다.  
@@ -20,7 +21,7 @@ published: true
 
 <br>
 
-## Virtual box + Ubuntu + Jekyll + git = 깃허브 블로그
+# Virtual box + Ubuntu + Jekyll + git = 깃허브 블로그
 
 내가 성공한 방법은 위 방법이다.
 
@@ -28,7 +29,7 @@ published: true
 
 <br>
 
-## Virtual box & Ubuntu 설치
+# Virtual box & Ubuntu 설치
 
 이 영상을 참고했다.
 
@@ -39,7 +40,7 @@ published: true
 
 <br>
 
-## Ruby 설치
+# Ruby 설치
 
 - 업데이트
 
@@ -76,7 +77,7 @@ gem install jekyll bundler
 
 <br>
 
-## 테스트 블로그 만들어보기!
+# 테스트 블로그 만들어보기!
 
 - 블로그 만들기 (현재 폴더에 myblog 라는 이름의 블로그 project 프로젝트 폴더가 만들어진다.)
 
@@ -110,7 +111,7 @@ http://localhost:4000
 
 <br>
 
-## 깃 계정 생성 & 연동
+# 깃 계정 생성 & 연동
 
 깃허브 페이지를 만들겠다고 마음먹은 사람이라면 깃 계정정도는 있을테니 pass!
 (깃 계정을 만들고 설정하는 내용은 다른 포스트를 참고하도록 한다.)
@@ -153,7 +154,7 @@ vi .ssh/id_rsa.pub
 
 <br>
 
-## jekyll 테마 적용
+# jekyll 테마 적용
 
 구글에서 jekyll theme 이라 검색하면 이 사이트가 나온다.
 http://jekyllthemes.org/
@@ -215,7 +216,7 @@ http://localhost:4000
 
 <br>
 
-## 포스팅
+# 포스팅
 
 `_posts` 폴더에 있는 기존 포스팅을 복사해서 새로운 포스팅을 만든 후 적당한 내용을 입력한다.
 
@@ -253,3 +254,29 @@ bundle exec jekyll serve
 
 - 접속
   http://localhost:4000
+
+
+
+<br>
+
+# 배포
+
+지금까지 만든 깃허브 블로그를 다른 사람들도 볼 수 있도록 웹에 배포하기 위해서는 git repository 이름을 변경하고, `_config.yml` 설정이 필요하다.
+
+- git repository > settings
+
+Repository name 항목을 username.github.io 로 변경한다.  username에는 자신의 아이디를 넣어주도록 한다.
+
+<br>
+
+- `_config.yml`
+
+```ruby
+url: 'https://dagician.github.io'  # 웹사이트 url을 입력한다, 예를 들면 'https://username.github.io'
+baseurl: ''
+```
+
+
+
+
+
