@@ -1,5 +1,6 @@
 ---
-title: Ubuntu로 Github 블로그 만들기
+title: Ubuntu로 Github 블로그 만들기 (+Youtube 영상 추가)
+
 author: dagician
 date: 2020-08-31 00:42:00 +0900
 categories: [git, github page]
@@ -14,6 +15,8 @@ published: true
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HQXtYpsgiWc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 
 과거 깃허브 블로그를 만들어야겠다는 생각이 들어 이런 저런 정보를 찾아봤지만 포기했었다.  
 
