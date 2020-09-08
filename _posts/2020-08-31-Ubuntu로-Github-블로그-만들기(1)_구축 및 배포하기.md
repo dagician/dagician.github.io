@@ -1,5 +1,5 @@
 ---
-title: Ubuntu로 Github 블로그 만들기 (+Youtube 영상 추가)
+title: (+Youtube)Ubuntu로 Github 블로그 만들기(1) -구축 및 배포하기
 
 author: dagician
 date: 2020-08-31 00:42:00 +0900
