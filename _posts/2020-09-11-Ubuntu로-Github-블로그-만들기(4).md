@@ -78,7 +78,16 @@ Website URL 입력
 
 
 
-sho
+short name 확인
+
+
+
+_config.yml 수정
+
+```
+comments: true
+shortname: 'Dagician blog'
+```
 
 
 
