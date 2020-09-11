@@ -1,6 +1,5 @@
 ---
-title: (+Youtube)Ubuntu로 Github 블로그 만들기(1) -구축 및 배포하기
-
+title: 깃허브 블로그 만들기(1) - 구축 및 배포하기!(+Youtube)
 author: dagician
 date: 2020-08-31 00:42:00 +0900
 categories: [git, github page]
@@ -9,9 +8,6 @@ toc: true
 pin: false
 comments: true
 published: true
-
-
-
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HQXtYpsgiWc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

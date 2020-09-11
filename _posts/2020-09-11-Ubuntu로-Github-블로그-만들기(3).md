@@ -1,8 +1,7 @@
 ---
-title: Ubuntu로 Github 블로그 만들기 (3) - favicon
-
+title: 깃허브 블로그 만들기(3) - favicon
 author: dagician
-date: 2020-09-08 19:00:00 +0900
+date: 2020-09-11 19:00:00 +0900
 categories: [git, github page]
 tags: [github page, 깃허브 페이지, 깃허브 블로그]
 toc: true

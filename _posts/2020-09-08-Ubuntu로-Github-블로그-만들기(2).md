@@ -1,6 +1,5 @@
 ---
-title: Ubuntu로 Github 블로그 만들기 (2) - Google Analytics (+Youtube 영상 추가)
-
+title: 깃허브 블로그 만들기(2) - Google Analytics (+Youtube 영상 추가)
 author: dagician
 date: 2020-09-08 19:00:00 +0900
 categories: [git, github page]
