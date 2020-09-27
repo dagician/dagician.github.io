@@ -7,7 +7,7 @@ tags: [github page, 깃허브 페이지, 깃허브 블로그]
 toc: true
 pin: false
 comments: true
-published: false
+published: true
 ---
 
 

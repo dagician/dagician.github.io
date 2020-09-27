@@ -7,7 +7,7 @@ tags: [github page, 깃허브 페이지, 깃허브 블로그]
 toc: true
 pin: false
 comments: true
-published: false
+published: true
 ---
 
 favicon 은 웹 브라우저의 즐겨찾기 또는 주소창에 뜨는 아이콘을 말한다.  Favorite과 Icon의 합성어로 주로 사용하는 크기는 16 x 16(px) 이고 확장자는 ico다. 크기가 작지만 은근히 이곳 저곳에서 많이 보이는 아이콘이기 때문에 로고나 심볼이 복잡한 서비스나 기업의 웹 디자이너들은 골머리 앓게된다. 웹사이트를 즐겨찾기할 경우 즐겨찾기 이름 앞에 그 사이트의 패비콘이 같이 뜨게 된다. <출처: [나무위키](https://namu.wiki/w/%ED%8C%A8%EB%B9%84%EC%BD%98)>

@@ -1,5 +1,5 @@
 ---
-title: 깃허브 블로그 만들기(2) - Google Analytics (+Youtube 영상 추가)
+title: 깃허브 블로그 만들기(2) - Google Analytics
 author: dagician
 date: 2020-09-08 19:00:00 +0900
 categories: [git, github page]
@@ -7,7 +7,7 @@ tags: [github page, 깃허브 페이지, 깃허브 블로그]
 toc: true
 pin: false
 comments: true
-published: false
+published: true
 ---
 
 지난번 만든 Gihub 블로그에 Google Analytics를 적용해 보도록 하겠습니다.
@@ -61,7 +61,7 @@ google_analytics:
 
 # 연동 성공
 
-![image-20200908163223516](C:\Users\jw\Desktop\image-20200908163223516.png)
+![image](../../assets/img/posts/Ubuntu로-Github-블로그-만들기(2)/01.png)
 
 
 

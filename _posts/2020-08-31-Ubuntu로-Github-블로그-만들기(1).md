@@ -1,5 +1,5 @@
 ---
-title: 깃허브 블로그 만들기(1) - 구축 및 배포하기!(+Youtube)
+title: 깃허브 블로그 만들기(1) - 환경 구축 및 배포하기!(+Youtube)
 author: dagician
 date: 2020-08-31 00:42:00 +0900
 categories: [git, github page]
